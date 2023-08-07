@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 100vh !important;
+}
+
+
+.tools-board {
+    width: 210px;
+}
+
+span {
+    margin-left: 7px !important;
+}
+
+.row .options {
+    list-style: none;
+    margin: 10px 0px 0px 5px;
+}
+
+.row .options .option {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.option:is(:hover, .act) svg {
+    filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%) !important;
+}
+
+.option:is(:hover, .act) i,
+.option:is(:hover, .act) input {
+    filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%) !important;
+}
+
+.option :where(span, label) {
+    cursor: pointer;
+    color: rgb(85, 85, 85);
+}
+
+.option:is(:hover, .act) :where(span, label) {
+    color: rgb(0 89 255) !important;
+}
+
+.option #fill-color {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+}
+
+#fill-color:checked~label {
+    color: rgb(0 89 255);
+}
+
+.option #size-slider {
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+}
+
+.colors .options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colors .option {
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    border-radius: 50%;
+    margin-top: 3px;
+}
+
+.colors .option:nth-child(1) {
+    background-color: black;
+}
+
+.colors .option:nth-child(2) {
+    background-color: white;
+    border: 1px solid black;
+
+}
+
+.colors .option:nth-child(3) {
+    background-color: red;
+}
+
+.colors .option:nth-child(4) {
+    background-color: green;
+}
+
+.colors .option:nth-child(5) {
+    background-color: #0000EE;
+}
+
+.option #color-picker{
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+.colors .option:hover {
+    /* position: relative;
+    content: "";
+    top: 50%;
+    left: 50%;
+    height: 12px;
+    width: 12px;
+    background-color: inherit;
+    border-radius: inherit;
+    border: 1px solid white;
+    transform: translate(-50%, -50%); */
+    border: 3px solid #4cff00 !important;
+
+}
+.selected{
+    border: 3px solid cyan !important;
+    
+}
+.buttons button{
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.buttons .clear-canvas{
+    color: white;
+    border: 1px solid white;
+}
+.buttons .save-img{
+    color: white;
+    border: 1px solid white;
+}
+
+.clear-canvas:hover{
+    background-color: gray;
+    color: white;
+}
+
+input {
+    cursor: pointer;
+}
+
+.cont{
+    width: 100%;
+    max-width: 1050px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+
+
+
+li {
+    list-style: none;
+}
+
+.drawing-board{
+    flex: 1;
+}
+.drawing-board canvas{
+    width: 100%;
+    height: 100%;
+}
